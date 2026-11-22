@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ScrollFrame PDF</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><img src="icons/icon48.png" alt="" width="38" height="38"><div><h1>ScrollFrame <span>PDF</span></h1><p>The whole story, in one file.</p></div></header>
+  <main>
+    <section id="active-job" class="notice" hidden><strong id="job-title">Capture in progress</strong><p id="job-detail"></p><button id="stop" class="secondary">Stop and keep captured pages</button></section>
+    <section id="actions">
+      <button id="pick" class="primary"><span>Pick a scrolling section</span><small>Point at the panel you want to capture</small></button>
+      <div class="two"><button id="page" class="secondary">Capture main page</button><button id="all" class="secondary">Capture all sections</button></div>
+      <p class="hint">All sections includes the main page and each detected scrolling panel in one PDF.</p>
+      <div class="section-heading"><h2>Choose from a list</h2><button id="scan" class="link-button">Scan page</button></div>
+      <div id="regions" class="regions"><p class="empty">Scan to find panels and embedded frames.</p></div>
+      <div id="list-actions" class="two" hidden><button id="toggle-all" class="link-button">Select all</button><button id="capture-selected" class="small-primary">Capture selected</button></div>
+      <details><summary>Capture settings</summary><div class="settings">
+        <label>Wait after scrolling<select id="settle"><option value="200">Fast · 0.2 seconds</option><option value="350" selected>Normal · 0.35 seconds</option><option value="800">Slow-loading pages · 0.8 seconds</option><option value="1500">Very slow pages · 1.5 seconds</option></select></label>
+        <label class="check"><input type="checkbox" id="hide-fixed" checked> Avoid repeated floating headers</label>
+        <label>Capture limit<select id="max-tiles"><option value="100">100 screenshots</option><option value="250" selected>250 screenshots</option><option value="500">500 screenshots</option></select></label>
+        <p class="hint">Keep this browser tab active while capturing. You can stop at any time.</p>
+      </div></details>
+    </section>
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+  <footer><span>Local capture. No uploads.</span><button id="history" class="link-button">Saved captures ↗</button></footer>
+  <script type="module" src="popup.js"></script>
+</body></html>

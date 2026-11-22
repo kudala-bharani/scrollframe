@@ -1,0 +1,25 @@
+SCROLLFRAME PDF — QUICK START
+
+1. Extract the ZIP. Keep the scrollframe-pdf folder somewhere permanent.
+2. Open chrome://extensions in Chrome.
+3. Turn on Developer mode.
+4. Choose Load unpacked and select the scrollframe-pdf folder
+   (the folder with manifest.json inside).
+5. Pin ScrollFrame PDF from Chrome's extensions menu.
+
+TO CAPTURE YOUR TASK CONTENT
+
+Open your task page, click the extension, choose Pick a scrolling section,
+and click inside the content panel. Keep that tab active while it scrolls.
+When the review page opens, click Download PDF.
+
+To include every detected scrolling panel, choose Capture all sections.
+The result is one PDF with the main page and each section in order.
+You can also use Scan page to choose several specific sections.
+
+If content appears slowly, choose a slower Wait after scrolling setting.
+Use the Stop button or Escape to stop and keep the part already captured.
+
+Everything runs locally. There is no account, subscription, or build step.
+Chrome's website-access permission is used to inspect embedded frames.
+See README.md for details and limitations.

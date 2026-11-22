@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your capture · ScrollFrame PDF</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="viewer.html"><span class="brand-icon" aria-hidden="true">S</span><span>ScrollFrame <strong>PDF</strong></span></a>
+    <a class="history-link" href="viewer.html">Saved captures <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section id="loading" class="empty-state" aria-live="polite"><div class="spinner" aria-hidden="true"></div><h1>Opening your capture</h1><p>Loading the images saved in this browser.</p></section>
+    <section id="error" class="empty-state error-state" hidden role="alert"><span class="state-symbol" aria-hidden="true">!</span><h1>Couldn’t open this capture</h1><p id="error-text"></p><a class="button secondary" href="viewer.html">View saved captures</a></section>
+    <section id="history" hidden>
+      <div class="page-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h1>Saved captures</h1><p class="subheading">Ready to review, export, or remove.</p></div><button id="delete-all" class="button quiet danger" type="button">Delete all</button></div>
+      <div id="history-empty" class="empty-state" hidden><span class="state-symbol" aria-hidden="true">▤</span><h2>Your first capture goes here</h2><p>Open a webpage, click the ScrollFrame extension, and choose a scrolling section.</p></div>
+      <div id="history-list" class="history-list"></div>
+    </section>
+    <section id="capture" hidden>
+      <div class="page-heading capture-heading"><div><p class="eyebrow">CAPTURE REVIEW</p><h1 id="capture-title"></h1><div class="source-row"><a id="source-link" target="_blank" rel="noopener noreferrer"></a><span id="capture-date"></span></div></div><span id="capture-status" class="badge"></span></div>
+      <div id="warnings" class="notice warning" hidden><strong>Check these details</strong><ul id="warning-list"></ul></div>
+      <div class="export-bar">
+        <div class="export-settings"><label>Page size<select id="paper"><option value="a4">A4</option><option value="letter">US Letter</option></select></label><label>Orientation<select id="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></label><label class="checkbox-label"><input id="include-header" type="checkbox" checked> Section headings</label></div>
+        <button id="download" class="button primary" type="button"><span aria-hidden="true">↓</span> Download PDF</button>
+      </div>
+      <div class="capture-summary"><p id="capture-summary"></p><button id="delete-capture" class="text-button danger" type="button">Delete capture</button></div>
+      <div id="export-progress" class="notice progress" hidden aria-live="polite"></div>
+      <div id="sections" class="sections"></div>
+    </section>
+  </main>
+  <footer class="app-footer"><span class="privacy-dot" aria-hidden="true"></span> Stored in this browser. Captures are never uploaded.</footer>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
