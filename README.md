@@ -4,11 +4,17 @@ A Chrome extension for capturing long web pages, independently scrolling panels,
 
 ## Install in Chrome
 
-1. Extract the ZIP file into a folder you want to keep.
+**[Install ScrollFrame PDF from the Chrome Web Store](https://chromewebstore.google.com/detail/scrollframe-pdf/aekoniokmnfamakcbmbldpkmfmgmkcol)**
+
+Open the listing and click **Add to Chrome**, then confirm **Add extension**. Open Chrome's extensions menu (the puzzle icon) and pin **ScrollFrame PDF**.
+
+### Manual installation for development
+
+1. Download this repository using **Code → Download ZIP** and extract it, or clone the repository.
 2. Open `chrome://extensions` in Chrome.
 3. Turn on **Developer mode** in the upper-right corner.
 4. Click **Load unpacked**.
-5. Select the extracted `scrollframe-pdf` folder containing `manifest.json`.
+5. Select the extracted or cloned project folder containing `manifest.json`.
 6. Open Chrome's extensions menu (the puzzle icon) and pin **ScrollFrame PDF**.
 
 Chrome loads the extracted folder, not the ZIP itself. Keep that folder in place while you use the extension. If your computer is managed by an organization, its Chrome policy may restrict loading unpacked extensions.
